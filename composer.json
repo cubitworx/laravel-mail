@@ -1,0 +1,30 @@
+{
+	"name": "cubitworx/laravel-mail",
+	"version": "1.0.0",
+	"description": "Mail functionality for Laravel apps",
+	"keywords": ["laravel", "mail"],
+	"license": "MIT",
+	"type": "library",
+	"authors": [
+		{
+			"name": "Charles Louw",
+			"email": "charles.louw@gmail.com"
+		}
+	],
+	"require": {
+		"php": "^7.1.3",
+		"laravel/framework": "^5.5.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Cubitworx\\Laravel\\Mail\\": "src/"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Cubitworx\\Laravel\\Mail\\Providers\\ServiceProvider"
+			]
+		}
+	}
+}
