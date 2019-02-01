@@ -2,8 +2,6 @@
 
 namespace Cubitworx\Laravel\Mail\Providers;
 
-use Cubitworx\Laravel\Mail\Listeners\LogMailSent;
-use Illuminate\Mail\Events\MessageSending;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider {
