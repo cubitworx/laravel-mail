@@ -2,9 +2,7 @@
 
 namespace App\Providers;
 
-use Cubitworx\Laravel\Mail\Listeners\LogMailSent;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Mail\Events\MessageSending;
 
 class EventServiceProvider extends ServiceProvider {
 
@@ -14,8 +12,8 @@ class EventServiceProvider extends ServiceProvider {
 	 * @var array
 	 */
 	protected $listen = [
-		MessageSending::class => [
-			LogMailSent::class,
+		\Illuminate\Mail\Events\MessageSent::class => [
+			\Cubitworx\Laravel\Mail\Listeners\LogMailSent::class,
 		],
 	];
 

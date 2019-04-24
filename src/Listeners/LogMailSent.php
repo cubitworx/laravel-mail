@@ -3,17 +3,17 @@
 namespace Cubitworx\Laravel\Mail\Listeners;
 
 use Cubitworx\Laravel\Mail\Model;
-use Illuminate\Mail\Events\MessageSending;
+use Illuminate\Mail\Events\MessageSent;
 
 class LogMailSent {
 
 	/**
 	 * Handle the event.
 	 *
-	 * @param  MessageSending  $event
+	 * @param  MessageSent  $event
 	 * @return void
 	 */
-	public function handle(MessageSending $event) {
+	public function handle(MessageSent $event) {
 		// Log Email
 		(new Model\LogEmail([
 			'bcc' => $event->message->getBcc(),

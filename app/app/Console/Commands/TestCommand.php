@@ -6,21 +6,21 @@ use App\Mail\TestMail;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Mail;
 
-class TestMailCommand extends Command {
+class TestCommand extends Command {
 
 	/**
 	 * The name and signature of the console command.
 	 *
 	 * @var string
 	 */
-	protected $signature = 'test:mail';
+	protected $signature = 'test';
 
 	/**
 	 * The console command description.
 	 *
 	 * @var string
 	 */
-	protected $description = 'Test email functionality';
+	protected $description = 'Test lib functionality';
 
 	/**
 	 * Execute the console command.
