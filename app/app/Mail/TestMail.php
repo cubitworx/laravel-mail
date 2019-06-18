@@ -2,13 +2,11 @@
 
 namespace App\Mail;
 
-use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
-use Illuminate\Queue\SerializesModels;
-use Illuminate\Contracts\Queue\ShouldQueue;
 
-class TestMail extends Mailable implements ShouldQueue {
-	use Queueable, SerializesModels;
+class TestMail extends Mailable {
+
+	public $test = 'Test email property';
 
 	/**
 	 * Build the message.
@@ -17,9 +15,9 @@ class TestMail extends Mailable implements ShouldQueue {
 	 */
 	public function build() {
 		$this
-			->from(['email'=>'test@test.com'])
-			->to(['email'=>'test@test.com'])
-			->subject('Test')
+			->from(['email'=>'from@test.com'])
+			->to(['email'=>'to@test.com'])
+			->subject('Test email subject')
 			->markdown('mail.test-markdown');
 
 		return $this;
